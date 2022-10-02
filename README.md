@@ -1,38 +1,38 @@
 # Maven-Pizza-challenge
 ![images (7)](https://user-images.githubusercontent.com/108612390/193467417-26c85e60-7998-4b89-8015-120f30f6f86e.png)
 
-The Maven Plato pizza dataset contains 4 csv files represnting a year's worth of sales from a fictitious pizza place, including the date and time of each order and the pizzas served, with additional details on the type, size, quantity, price, and ingredients.
-My Analysis of this Dataset was done using PostgreSQL and Power BI
+# The Maven Plato pizza dataset contains 4 csv files represnting a year's worth of sales from a fictitious pizza place, including the date and time of each order and the pizzas served, with additional details on the type, size, quantity, price, and ingredients.
+# My Analysis of this Dataset was done using PostgreSQL and Power BI
 
 # ANALYSIS ON POSTGRESQL
 
---MAVEN PLATO PIZZA CHALLENGE ANALYSIS
---PLATO PIZZA IS A GREEK-INSPIRED PIZZA PLACE IN NEW JERSEY SEEKING TO IMPROVE SALES AND MAXIMIZE PROFIT
---THIS ANALYSIS WAS PERFORMED USING AGGREGATE FUNCTIONS,OPERATORS,CONSTRAINTS,CASE EXPRESSIONS,COMMON TABLE EXPRESSION (CTE),JOINS,AGGREGATION KEYWORDS
+# --MAVEN PLATO PIZZA CHALLENGE ANALYSIS
+# --PLATO PIZZA IS A GREEK-INSPIRED PIZZA PLACE IN NEW JERSEY SEEKING TO IMPROVE SALES AND MAXIMIZE PROFIT
+# --THIS ANALYSIS WAS PERFORMED USING AGGREGATE FUNCTIONS,OPERATORS,CONSTRAINTS,CASE EXPRESSIONS,COMMON TABLE EXPRESSION (CTE),JOINS,AGGREGATION KEYWORDS
 
---TOTAL NUMBER OF ORDERS
-select sum(quantity) as total_orders
-from orders
+# --TOTAL NUMBER OF ORDERS
+# select sum(quantity) as total_orders
+# from orders
 
---TOTAL REVENUE
-select sum(sales) as total_sales
-from orders
+# --TOTAL REVENUE
+# select sum(sales) as total_sales
+# from orders
  
---AVERAGE PRICE OF PIZZA 
-select avg(price) as average_price
-from pizzas
+# --AVERAGE PRICE OF PIZZA 
+# select avg(price) as average_price
+# from pizzas
 
---PIZZAS SELLING BELOW AND ABOVE AVERAGE PRICE (avg price=16.4)
-select name,
-case
-when price <=16.4 then 'below_average'
-else 'above_average'
-end as price_variation
-from pizza_types a
-join pizzas b
-on a.pizza_type_id = b.pizza_type_id
-group by name,price_variation
-order by price_variation
+# --PIZZAS SELLING BELOW AND ABOVE AVERAGE PRICE (avg price=16.4)
+# select name,
+# case
+# when price <=16.4 then 'below_average'
+# else 'above_average'
+# end as price_variation
+# from pizza_types a
+# join pizzas b
+# on a.pizza_type_id = b.pizza_type_id
+# group by name,price_variation
+# order by price_variation
 
 --AVERAGE ORDER VALUE
 select avg(quantity) as average_order_value
