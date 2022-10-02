@@ -1,0 +1,112 @@
+--MAVEN PLATO PIZZA CHALLENGE ANALYSIS
+--PLATO PIZZA IS A GREEK-INSPIRED PIZZA PLACE IN NEW JERSEY SEEKING TO IMPROVE SALES AND MAXIMIZE PROFIT
+--THIS ANALYSIS WAS PERFORMED USING AGGREGATE FUNCTIONS,OPERATORS,CONSTRAINTS,CASE EXPRESSIONS,COMMON TABLE EXPRESSION (CTE),JOINS,AGGREGATION KEYWORDS
+
+--TOTAL NUMBER OF ORDERS
+select sum(quantity) as total_orders
+from orders
+
+--TOTAL REVENUE
+select sum(sales) as total_sales
+from orders
+ 
+--AVERAGE PRICE OF PIZZA 
+select avg(price) as average_price
+from pizzas
+
+--PIZZAS SELLING BELOW AND ABOVE AVERAGE PRICE (avg price=16.4)
+select name,
+case
+when price <=16.4 then 'below_average'
+else 'above_average'
+end as price_variation
+from pizza_types a
+join pizzas b
+on a.pizza_type_id = b.pizza_type_id
+group by name,price_variation
+order by price_variation
+
+--AVERAGE ORDER VALUE
+select avg(quantity) as average_order_value
+from orders
+
+--VARIETIES OF PIZZA SOLD AT PLATO PIZZA
+select pizza_type_id as pizza_types
+from  pizza_types
+
+--TOTAL NUMBER OF PIZZAS SOLD AT PLATO PIZZA
+select count(distinct name)
+from pizza_types
+
+--PIZZA WITH THE MOST SALES/BEST SELLING PIZZA
+with pizza_sales as(
+select pizza_id, name
+from pizza_types a
+join pizzas b
+on a.pizza_type_id = b.pizza_type_id
+group by pizza_id,name)
+  select name as pizza_name, sum(sales) as total_sales
+  from pizza_sales x
+  join orders y
+  on x.pizza_id = y.pizza_id
+  group by pizza_name
+  order by total_sales desc
+  limit 1
+  
+--PIZZA WITH LEAST SALES/WORST SELLING PIZZA
+with pizza_sales as(
+select pizza_id, name
+from pizza_types a
+join pizzas b
+on a.pizza_type_id = b.pizza_type_id
+group by pizza_id,name)
+  select name as pizza_name, sum(sales) as total_sales
+  from pizza_sales x
+  join orders y
+  on x.pizza_id = y.pizza_id
+  group by pizza_name
+  order by total_sales asc
+  limit 1
+
+--QUANTITY OF ORDERS BY PIZZA SIZE
+select size,sum(quantity) as total_orders
+from pizzas a
+join orders b
+on a.pizza_id = b.pizza_id
+group by size
+order by total_orders desc
+
+--MONTH WITH THE MOST SALES
+select month_name,sum(sales) as total_sales
+from orders
+group by month_name
+order by total_sales desc
+
+--WHAT DAY OF THE WEEK ATTRACTS THE MOST ORDERS/ BUSIEST DAY
+select day_name, sum(sales) as total_sales
+from orders 
+group by day_name
+order by total_sales desc
+
+--TIME OF THE WEEK WITH THE MOST ORDERS/BUSIEST TIME
+select time, sum(sales) as total_sales
+from orders 
+group by time
+order by total_sales desc
+
+--INSIGHTS
+--A total of 49,574 orders were made in 2015
+--Total revenue realized was 817,860
+--Average Pizza price is $16.4
+--The Thai Chicken Pizza generated the most revenue totalling $43,434 while the Brie Carre Pizza generated the least sales of $11,588
+--Size L(large) appears to have the most quantity of orders of 18,956 while size XXL(extra extra large) has the least of 28 orders
+-- July recorded the most number of sales with $72,557 followed by may, march, november... Going forward plato pizza would require more hands to handle mid_year orders 
+-- Plato Pizza makes the most sales on sundays which is understandable as family and friends gather during the weekend and refreshments like pizza would be a must
+--The peak hour generating the most sales appears to be mid-day of 11am-2pm
+
+
+
+
+  
+
+
