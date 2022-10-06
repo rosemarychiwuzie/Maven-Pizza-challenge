@@ -1,5 +1,4 @@
 --MAVEN PLATO PIZZA CHALLENGE ANALYSIS
---The Maven Plato pizza dataset contains 4 csv files represnting a year's worth of sales from a fictitious pizza place, including the date and time of each order and the pizzas served, with additional details on the type, size, quantity, price, and ingredients. My Analysis of this Dataset was done using PostgreSQL and Power BI
 --PLATO PIZZA IS A GREEK-INSPIRED PIZZA PLACE IN NEW JERSEY SEEKING TO IMPROVE SALES AND MAXIMIZE PROFIT
 --THIS ANALYSIS WAS PERFORMED USING AGGREGATE FUNCTIONS,OPERATORS,CONSTRAINTS,CASE EXPRESSIONS,COMMON TABLE EXPRESSION (CTE),JOINS,AGGREGATION KEYWORDS
 
@@ -28,7 +27,7 @@ group by name,price_variation
 order by price_variation
 
 --AVERAGE ORDER VALUE
-select avg(quantity) as average_order_value
+select sum(sales)/count(order_id) as average_order_value
 from orders
 
 --VARIETIES OF PIZZA SOLD AT PLATO PIZZA
@@ -95,6 +94,11 @@ from orders
 group by time
 order by total_sales desc
 
+--HOW MANY ORDERS ARE WE MAKING DURING PEAK PERIODS
+select count(order_id) as orders_at_peakday
+from orders
+where day_name = 'Sunday'
+
 --INSIGHTS
 --A total of 49,574 orders were made in 2015
 --Total revenue realized was 817,860
@@ -104,6 +108,7 @@ order by total_sales desc
 -- July recorded the most number of sales with $72,557 followed by may, march, november... Going forward plato pizza would require more hands to handle mid_year orders 
 -- Plato Pizza makes the most sales on sundays which is understandable as family and friends gather during the weekend and refreshments like pizza would be a must
 --The peak hour generating the most sales appears to be mid-day of 11am-2pm
+--On peak periods typically sundays, plato pizza gets over 8,000 orders.
 
 
 
