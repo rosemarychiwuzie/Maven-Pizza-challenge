@@ -43,6 +43,14 @@ https://github.com/rosemarychiwuzie/Maven-Pizza-challenge/blob/main/PostgreSQL%2
 ![Screenshot (65)](https://user-images.githubusercontent.com/108612390/194353332-d60c0ae1-dbe9-4f06-a061-f57764b1e954.png)
 - The visual above shows the intensity of sales by size and category of pizzas. Apparently there are just four categories of pizzas at plato's place and the Large sized in Category Veggie seems to be the customers favourite while size XXL in category Classic is the customers least favourite
 
+# Insights
+- Average Pizza price is $16.4
+- The Thai Chicken Pizza generated the most revenue totalling $43,434 while the Brie Carre Pizza generated the least sales of $11,588
+- Size L(large) appears to have the most quantity of orders of 18,956 while size XXL(extra extra large) has the least of 28 orders
+- July recorded the most number of sales with $72,557 followed by may, march, november... Going forward plato pizza would require more hands to handle mid_year orders 
+- Plato Pizza makes the most sales on sundays which is understandable as family and friends gather during the weekend and refreshments like pizza would be a must
+- The peak hour generating the most sales appears to be mid-day of 11am-2pm
+- On peak periods typically sundays, plato pizza gets over 8,000 orders.
 
 
 
@@ -55,8 +63,3 @@ https://github.com/rosemarychiwuzie/Maven-Pizza-challenge/blob/main/PostgreSQL%2
 
 
 
-
-
-
-
-ANALYSIS
