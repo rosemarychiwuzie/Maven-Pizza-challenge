@@ -22,6 +22,36 @@ Power BI: The microsoft Business intelligence tool was very helpful in my visual
 https://app.powerbi.com/view?r=eyJrIjoiOGE5YWJiMWEtM2M5MS00M2YwLWJjZDUtOWNiODcyNTU0ZTBhIiwidCI6IjI3MTZhMTNmLTBhOTMtNGZlMy1hYTMxLTQ4ZDgxNTA1ZTdlNiJ9
 
 - Futher Analysis was performed using PostgreSQL
+https://github.com/rosemarychiwuzie/Maven-Pizza-challenge/blob/main/PostgreSQL%20Analysis%20on%20Maven%20Pizza%20Challenge.txt
+
+# The Analysis
+![Screenshot (60)](https://user-images.githubusercontent.com/108612390/194349332-97fe168d-d622-4bba-a79b-f7d2af9541fe.png)
+- The busiest hours appears to be 12pm to 2pm(mid-day)
+
+![Screenshot (61)](https://user-images.githubusercontent.com/108612390/194350181-4701afb0-3551-4df5-bf21-f823b7e05dc8.png)
+- The best selling pizza is the The Thai Chicken Pizza while the least selling Pizza is The Brie Carre Pizza
+
+![Screenshot (62)](https://user-images.githubusercontent.com/108612390/194350891-d8cc65a7-f30c-47d5-87a9-de4511b044e3.png)
+- Plato Pizza place recorded the most sales 2015 on Sundays followed by Mondays and the least number of order and sales is on Thursdays
+
+![Screenshot (63)](https://user-images.githubusercontent.com/108612390/194351514-c24aa062-0a4f-4d44-b62d-0974787e026a.png)
+- Customers appreciate and purchase the Large sized Pizza more than the other available sizes. The Size XXL on the other hand is the least purchased
+
+![Screenshot (64)](https://user-images.githubusercontent.com/108612390/194352347-affe1bc2-c09e-4b51-9527-c0d433239ba6.png)
+- The month July recorded the most number of orders and sales and a decline of sales in October as it recorded the least number of orders. Plato pizza surely needs to work on sales during autumn.
+
+![Screenshot (65)](https://user-images.githubusercontent.com/108612390/194353332-d60c0ae1-dbe9-4f06-a061-f57764b1e954.png)
+- The visual above shows the intensity of sales by size and category of pizzas. Apparently there are just four categories of pizzas at plato's place and the Large sized in Category Veggie seems to be the customers favourite while size XXL in category Classic is the customers least favourite
+
+
+
+
+
+
+
+
+
+
 
 
 
