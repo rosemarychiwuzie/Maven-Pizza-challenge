@@ -16,6 +16,7 @@ The Maven Plato pizza dataset contains 4 csv files representing a year's worth o
 - Power BI: The microsoft Business intelligence tool was very helpful in my visualization process. I imported the datasets into Power BI and created a singular dashboard that is clear and visually appealing
 
 - Dashboard using Power BI
+- 
 ![Screenshot (66)](https://user-images.githubusercontent.com/108612390/194346831-d5fa70e2-9bae-47d7-84ef-10d770964ad6.png)
 
 - click on the link below to interact with the dashboard
@@ -49,7 +50,7 @@ https://github.com/rosemarychiwuzie/Maven-Pizza-challenge/blob/main/PostgreSQL%2
 - Size L(large) appears to have the most quantity of orders of 18,956 while size XXL(extra extra large) has the least of 28 orders
 - July recorded the most number of sales with $72,557 followed by may, march, november... Going forward plato pizza would require more hands to handle mid_year orders 
 - Plato Pizza makes the most sales on sundays which is understandable as family and friends gather during the weekend and refreshments like pizza would be a must
-- The peak hour generating the most sales appears to be mid-day of 11am-2pm
+- The peak hour generating the most sales appears to be mid-day of 12pm-2pm
 - On peak periods typically sundays, plato pizza gets over 8,000 orders.
 
 
